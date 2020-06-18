@@ -74,7 +74,6 @@ function loadLyricsForEra(era) {
 
     era.albums.forEach(function (album) {
       lyricpromises.push(loadLyricsForAlbum(album.lyrics));
-      var promise = loadLyricsForAlbum(album.lyrics);
     });
 
     console.log('Loading lyrics for era: ' + era.era);

@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="logic.js"></script>
+    </head>
+    <body>
+        <div class="container"> 
+            <section class="banner">
+                <img class="logo" src="./images/beatleslogo.svg"></img>
+                <div>LYRICS ANALYSIS</div>
+                <div class="links">
+                    <div class="link"><a href="">COMPARISON</a></div>
+                    <div class="link"><a href="">ABOUT</a></div>
+                </div>
+            </section>
+            <bandpic-element image="./images/experimentation.svg"></bandpic-element>
+            <section class="data">
+                <datablock-element trait="OPENNESS" value=56></datablock-element>
+                <datablock-element trait="CONSCIENCIOUSNESS" value=42></datablock-element></datablock-element>
+                <datablock-element trait="EXTRAVERSION" value=79></datablock-element></datablock-element>
+                <datablock-element trait="AGREEABLENESS" value=64></datablock-element></datablock-element>
+                <datablock-element trait="EMOTIONAL RANGE" value=88></datablock-element></datablock-element>
+            </section>
+        </div>
+    </body>
+
+    <template id="bandpic">
+        <style>
+            .pic{
+                display: flex;
+                place-content: center;
+            }
+
+            .bandpic{
+                width:100%;
+            }
+        </style>
+        <section class="pic">
+            <img id="band" class="bandpic" src="">
+        </section>
+    </template>
+
+    <template id="datablock">
+        <style>
+            .datablock{
+                display:flex;
+                width:100%;
+                flex-direction: column;
+                align-items: flex-start;
+                padding:20px;
+            }
+
+            .infostrip{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width:100%;
+            }
+
+            .numberbar{
+                display: flex;
+                min-width: 80%;
+                height:50px;
+                padding: 20px;
+            }
+
+            .score{
+                width:75%;
+                background: var(--lyrics-analysis-score-color);
+            }
+
+            .gap{
+                width:25%;
+                background: var(--lyrics-analysis-secondary-color);
+            }
+
+            .percentage{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                min-width: 20%;
+                font-size: 36px;
+                padding: 20px;
+                font-weight: bold;
+            }
+
+            .categorybar{
+                margin:20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 92%;
+            }
+
+            .categorylabel{
+                font-size:30px;
+                font-weight: bold;
+            }
+
+            .subcategory{
+                font-size:30px;
+                /* font-weight: bold; */
+                text-transform: capitalize;
+                width:300px;
+                border:1px solid var(--lyrics-analysis-secondary-color);
+            }
+
+            .subcategorytext{
+                font-size:30px;
+                /* font-weight: bold; */
+                text-transform: capitalize;
+            }
+        
+        </style>
+        <section class="datablock">
+            <div class="infostrip">
+                <div class="numberbar">
+                    <div id="score" class="score"></div>
+                    <div id="gap" class="gap"></div>
+                </div>
+                <div id="percentage" class="percentage"></div>
+            </div>
+            <div class="categorybar">
+                <label id="traitlabel" class="categorylabel"></label>
+                <select class="subcategory" name="bigfive" id="subcategory">
+                    <option class="subcategorytext" value="something">subcategory</option>
+                    <option class="subcategorytext" value="saab">Saab</option>
+                    <option class="subcategorytext" value="mercedes">Mercedes</option>
+                    <option class="subcategorytext" value="audi">Audi</option>
+                  </select>
+            </div>
+        </section>
+    </template>
+
+    <script src="./components/bandpic.js"></script>
+    <script src="./components/datablock.js"></script>
+
+</html>
