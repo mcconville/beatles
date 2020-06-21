@@ -1,7 +1,12 @@
 :root {
     --lyrics-analysis-ink-color:#282D3C;
     --lyrics-analysis-score-color:#798EA4;
+    --lyrics-analysis-score-color:#6B5876;
     --lyrics-analysis-secondary-color:#EDF1FE;
+    --lyrics-analysis-percentage-color:#19558F;
+    --lyrics-analysis-category-color:#0F4C81;
+    --lyrics-analysis-gap-color:#f9fafe;
+    --lyrics-analysis-link-color:#fa7a35;
 }
 
 body{
@@ -42,7 +47,9 @@ body{
 }
 
 .link{
-    margin-left:20px;
+    margin-left:24px;
+    color:var(--lyrics-analysis-link-color);
+    text-decoration: none;
 }
 
 .logo{
@@ -54,8 +61,54 @@ body{
     flex-direction:column;
 }
 
+.keen-slider{
+    height:640px;
+}
 
+.era{
+    display: flex;
+    flex-direction: row;
+    background: var(--lyrics-analysis-secondary-color);
+    width: 100%;
+    height: 120px;
+    align-content: center;
+    margin-top: 50px;
+    align-items: center;
+    margin-bottom: 50px;
+}
 
+.eralabel{
+    margin-left:40px;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--lyrics-analysis-score-color);
+}
+
+.big5label{
+    color: var(--lyrics-analysis-category-color);
+    font-weight: bold;
+    margin-left: 40px;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.dots {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    margin-bottom: 30px;;
+}
+
+.dot {
+    border: none;
+    width: 30px;
+    height: 30px;
+    background: #c5c5c5;
+    border-radius: 50%;
+    margin: 0 30px;
+    padding: 5px;
+    cursor: pointer;
+}
 
 
 /* 
