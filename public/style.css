@@ -6,7 +6,7 @@
     --lyrics-analysis-percentage-color:#19558F;
     --lyrics-analysis-category-color:#0F4C81;
     --lyrics-analysis-gap-color:#f9fafe;
-    --lyrics-analysis-link-color:#fa7a35;
+    --lyrics-analysis-link-color:#e8a798;
 }
 
 body{
@@ -103,11 +103,15 @@ body{
     border: none;
     width: 30px;
     height: 30px;
-    background: #c5c5c5;
+    background: #eeeeee;
     border-radius: 50%;
     margin: 0 30px;
     padding: 5px;
     cursor: pointer;
+}
+
+.active{
+    background:var(--lyrics-analysis-link-color);
 }
 
 
