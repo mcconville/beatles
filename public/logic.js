@@ -44,7 +44,7 @@ function initialize(){
             })
         }
     };
-    xhttp.open("GET", "./data/timeline.json", true);
+    xhttp.open("GET", "data/timeline.json", true);
     xhttp.send();
 }
 
