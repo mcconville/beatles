@@ -1,0 +1,101 @@
+[{
+    "order": 1,
+    "era": "Beatle Mania",
+    "albums": [{
+        "title": "A Hard Days Night",
+        "lyrics": "harddaysnight.txt",
+        "releaseMonth": "June",
+        "releaseYear": 1964
+    }, {
+        "title": "Help!",
+        "lyrics": "help.txt",
+        "releaseMonth": "August",
+        "releaseYear": 1965
+    }],
+    "mood": "Mania",
+    "sytle": "pop",
+    "start": 1963,
+    "end": 1965,
+    "image": "mania.svg"
+}, {
+    "order": 2,
+    "era": "Experimentation",
+    "albums": [{
+        "title": "Rubber Soul",
+        "lyrics": "harddaysnight.txt",
+        "releaseMonth": "December",
+        "releaseYear": 1965
+    }, {
+        "title": "Revolver",
+        "lyrics": "help.txt",
+        "releaseMonth": "August",
+        "releaseYear": 1966
+    }],
+    "mood": "Experimentation",
+    "sytle": "visionary",
+    "start": 1965,
+    "end": 1966,
+    "image": "experimentation.svg"
+}, {
+    "order": 3,
+    "era": "Psychedelia",
+    "albums": [{
+        "title": "Sgt. Pepper's Lonely Hearts Club Band",
+        "lyrics": "sgtpepper.txt",
+        "releaseMonth": "June",
+        "releaseYear": 1967
+    }, {
+        "title": "Magical Mystery Tour",
+        "lyrics": "magicalmysterytour.txt",
+        "releaseMonth": "November",
+        "releaseYear": 1967
+    }, {
+        "title": "Yellow Submarine",
+        "lyrics": "yellowsubmarine.txt",
+        "releaseMonth": "January",
+        "releaseYear": 1969
+    }],
+    "mood": "Everything Is Cool",
+    "sytle": "psychedelic rock ",
+    "start": 1967,
+    "end": 1969,
+    "image": "psychedelia.svg"
+}, {
+    "order": 4,
+    "era": "Back To Basics",
+    "albums": [{
+        "title": "The Beatles",
+        "lyrics": "whitealbum.txt",
+        "releaseMonth": "November",
+        "releaseYear": 1968
+    }, {
+        "title": "Let It Be",
+        "lyrics": "letitbe.txt",
+        "releaseMonth": "May",
+        "releaseYear": 1970
+    }],
+    "mood": "Splintering, Hostile Lethergy",
+    "sytle": "rock",
+    "start": 1968,
+    "end": 1970,
+    "image": "backtobasics.svg"
+}, {
+    "order": 5,
+    "era": "Resurgence",
+    "albums": [{
+        "title": "Abbey Road",
+        "lyrics": "abbeyroad.txt",
+        "releaseMonth": "September",
+        "releaseYear": 1969
+    }, {
+        "title": "Hey Jude",
+        "lyrics": "heyjude.txt",
+        "releaseMonth": "February",
+        "releaseYear": 1970
+    }],
+    "mood": "Going Out With A Bang",
+    "sytle": "rock",
+    "start": 1969,
+    "end": 1970,
+    "image": "resurgence.svg"
+}]
