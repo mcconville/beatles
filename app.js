@@ -11,8 +11,10 @@ var app = express();
 var port = process.env.PORT || 8080;
 
 // serve the files out of ./public as our main files
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + ''));
 
+// app.use('/static', express.static('/'))
+app.use(express.static('.'))
 // get the app environment from Cloud Foundry
 var log4js = require('log4js');
 var logger = log4js.getLogger();

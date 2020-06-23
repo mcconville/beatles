@@ -1,7 +1,7 @@
 class Bandpic extends HTMLElement {
 
     static get observedAttributes() {
-        return ['src', '', '', ''];
+        return ['image', '', '', ''];
     }
 
     constructor() {

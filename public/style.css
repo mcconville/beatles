@@ -13,15 +13,16 @@ body{
     padding:0;
     margin:0;
     color: var(--lyrics-analysis-ink-color);
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'IBM Plex Sans', sans-serif; */
 }
-
 
 .container{
     padding: 0;
     margin: 0;
     /* #F5F8FA; #33729b; #9f805e; */
     /*    font-family: 'Open Sans', sans-serif;*/
-    font-family: 'IBM Plex Sans', sans-serif;
+    /* font-family: 'IBM Plex Sans', sans-serif; */
     /* font-family: 'Questrial', sans-serif; */
     -webkit-font-smoothing: antialiased;
     display: flex;
@@ -35,8 +36,9 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-top:20px;
-    padding:20px;
+    margin-top: 20px;
+    margin: 30px;
+    margin-bottom: 0;
     font-weight: bold;
 }
 
@@ -79,17 +81,19 @@ body{
 
 .eralabel{
     margin-left:40px;
-    font-size: 50px;
+    font-size: 34px;
     font-weight: bold;
-    color: var(--lyrics-analysis-score-color);
+    color: var(--lyrics-analysis-ink-color);
+    text-transform: uppercase;
 }
 
 .big5label{
     color: var(--lyrics-analysis-category-color);
     font-weight: bold;
     margin-left: 40px;
-    font-size: 40px;
+    font-size: 32ßpx;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .dots {
@@ -109,6 +113,14 @@ body{
     padding: 5px;
     cursor: pointer;
 }
+
+  .dot:focus {
+    outline: none;
+  }
+
+  .dot--active {
+    background:var(--lyrics-analysis-score-color);
+  }
 
 .active{
     background:var(--lyrics-analysis-link-color);

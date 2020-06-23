@@ -4,8 +4,7 @@
         <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/keen-slider@4.1.3/keen-slider.min.css"/>
-        
-        <script src="./public/logic.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">          
     </head>
     <body onload="initialize()">
         <div class="container"> 
@@ -17,14 +16,8 @@
                     <a class="link" href="">ABOUT</a>
                 </div>
             </section>
-            <div id="my-keen-slider" class="keen-slider">
-                <div class="keen-slider__slide"><bandpic-element image="./public/images/mania.svg"></bandpic-element></div>
-                <div class="keen-slider__slide"><bandpic-element image="./public/images/experimentation.svg"></bandpic-element></div>
-                <div class="keen-slider__slide"><bandpic-element image="./public/images/psychedelia.svg"></bandpic-element></div>
-                <div class="keen-slider__slide"><bandpic-element image="./public/images/backtobasics.svg"></bandpic-element></div>
-                <div class="keen-slider__slide"><bandpic-element image="./public/images/resurgence.svg"></bandpic-element></div>
-            </div>
-            <div class="dots"><button class="dot"></button><button class="dot"></button><button class="dot"></button><button class="dot active"></button><button class="dot"></button><button class="dot"></button></div>
+            <div id="my-keen-slider" class="keen-slider"></div>
+            <div id="dots" class="dots"></div>
             <section class="era">
                 <label class="eralabel">Psychedelia:  1967 - 1969</label>
             </section>
@@ -39,19 +32,7 @@
         </div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@4.1.3/keen-slider.min.js"></script>
-    <script>
-
-        var slider = new KeenSlider('#my-keen-slider', {
-        loop: true,
-        autoHeight:true,
-        created: () => {
-            console.log('created')
-        },
-        slideChanged:() =>{
-            console.log('slide changed')
-        }})
-    //   var slider = new KeenSlider("#my-keen-slider");
-    </script>
+    <script src="./public/logic.js"></script>
 
 <template id="bandpic">
     <style>
@@ -75,7 +56,8 @@
             display:flex;
             flex-direction: column;
             align-items: flex-start;
-            margin:20px;
+            margin-left:20px;
+            margin-top:10px;
             padding-bottom: 10px;
         }
 
@@ -90,7 +72,7 @@
             display: flex;
             min-width: 80%;
             max-width: 80%;
-            height:40px;
+            height:30px;
             padding: 20px;
         }
 
@@ -131,26 +113,28 @@
         }
 
         .categorylabel{
-            font-size:30px;
+            font-size:26px;
             font-weight: bold;
             color: var(--lyrics-analysis-score-color);
         }
 
         .subcategory{
-            font-size:30px;
-            /* font-weight: bold; */
-            text-transform: capitalize;
-            width:300px;
-            border:1px solid var(--lyrics-analysis-secondary-color);
-            border-radius:4px;
-            padding:10px;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: UPPERCASE;
+            width: 300px;
+            border: 1px solid var(--lyrics-analysis-secondary-color);
+            border-radius: 4px;
+            padding: 10px;
             background: white;
-            -webkit-appearance:none;
+            color: #a69aac;
+            -webkit-appearance: none;
         }
 
-        select{
+        select, option{
             color:var(--lyrics-analysis-score-color);
             font-weight: bold;
+            text-align:right;   
         }
 
         .subcategorytext{
@@ -172,7 +156,7 @@
         </div>
         <div class="categorybar">
             <label id="traitlabel" class="categorylabel"></label>
-            <select class="subcategory" name="bigfive" id="subcategory">
+            <select dir="rtl" class="subcategory" name="bigfive" id="subcategory">
                 <option class="subcategorytext" value="something">subcategory</option>
                 <option class="subcategorytext" value="saab">Saab</option>
                 <option class="subcategorytext" value="mercedes">Mercedes</option>
