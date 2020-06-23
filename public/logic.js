@@ -48,6 +48,7 @@ function initialize(){
     xhttp.send();
 }
 
+
 function updateClasses(instance) {
     var slide = instance.details().relativeSlide;
     // var arrowLeft = document.getElementById("arrow-left");
