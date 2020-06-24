@@ -1,3 +1,8 @@
+var timelinedata;
+var lyricsdata;
+
+var beatles = new Array();
+
 function initialize(){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -7,16 +12,18 @@ function initialize(){
 
             var carousel = document.getElementById('my-keen-slider');
 
-            var data = JSON.parse(xhttp.response);
+            timelinedata = JSON.parse(xhttp.response);
 
-            data.forEach(function(item){
+            timelinedata.forEach(function(item){
+
+                beatles[item.order] = item;
 
                 var slide = document.createElement('div');
                 slide.className = 'keen-slider__slide';
 
                 var pic = document.createElement('bandpic-element');
                 pic.setAttribute('image', './images/'+ item.image);
-                // pic.image = './images/'+ item.image;
+                pic.image = './images/'+ item.image;
 
                 slide.appendChild(pic);
                 carousel.appendChild(slide);
@@ -37,15 +44,51 @@ function initialize(){
                       });
                     });
                     updateClasses(instance);
+
+                    var index = instance.details().relativeSlide + 1;
+                    updateBars(index);
                 },
                 slideChanged(instance) {
+
+                    var index = instance.details().relativeSlide +1;
+
+                    timelinedata.forEach(function(item){
+
+                        if(item.order === index){
+                            var string = item.era + ' : ' + item.start + ' - ' + item.end;
+                            var eralabel = document.getElementById('eralabel');
+                            eralabel.innerHTML = string;
+                            console.log(string)
+                        }
+
+                    })
+
                     updateClasses(instance);
+                    updateBars(index);
                 }
             })
         }
     };
     xhttp.open("GET", "./data/timeline.json", true);
     xhttp.send();
+}
+
+function updateBars(index){
+
+    console.log('UPDATE BARS');
+
+    console.log(beatles[index].era);
+
+    beatles[index].analysis.personality.forEach(function(datapoint){
+
+        console.log(datapoint);
+
+        var point = document.getElementById(datapoint.name);
+
+        var value = Math.round( datapoint.percentile * 100 );
+        point.setAttribute('value', value);
+
+    })
 }
 
 

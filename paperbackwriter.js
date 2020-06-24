@@ -8,6 +8,8 @@ const {
 
 var timeline = require('./data/timeline.json');
 
+var newTimeLine = [];
+
 const personality_insights = new PersonalityInsightsV3({
   version: '2019-10-13',
   authenticator: new IamAuthenticator({
@@ -37,10 +39,18 @@ function analyze(words, era) {
       // console.log(JSON.stringify(profile, null, 2));
       // console.log(album);
       // console.log(response);
-      response.era = era.era;
-      results.push(response);
+      // response.era = era.era;
+      // response.index = era.order;
 
-      fs.writeFile('beatles.json', JSON.stringify(results), function (err) {
+   
+
+      era.analysis = response.result;
+
+      // newTimeLine.push(era);
+      newTimeLine[era.order] = era;
+      // results.push(response);
+
+      fs.writeFile('beatles.json', JSON.stringify(newTimeLine), function (err) {
         if (err) {
           return console.log(err);
         }

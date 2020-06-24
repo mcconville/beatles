@@ -33,9 +33,24 @@ class Datablock extends HTMLElement {
         this.gap = sr.getElementById('gap');
         this.gap.style.width = (100-this.value) + '%';
 
-
-
         console.log('ADDING DATABLOCK : ' );
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        console.log('BIG FIVE ATTRIBUTE CHANGED');
+
+        var sr = this.shadowRoot;
+
+        if (name == 'value') {
+            this.percentage = sr.getElementById('percentage');
+            this.percentage.innerHTML = newValue + '%';
+
+            this.score = sr.getElementById('score');
+            this.score.style.width = newValue + '%';
+
+            this.gap = sr.getElementById('gap');
+            this.gap.style.width = (100-newValue) + '%';
+        }        
     }
 }
 
