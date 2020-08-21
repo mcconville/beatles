@@ -29,6 +29,7 @@ body{
     flex-direction: column;
     justify-content: center;
     font-size: 20px;
+    align-items: center;
 }
 
 .banner{
@@ -40,6 +41,9 @@ body{
     margin: 30px;
     margin-bottom: 0;
     font-weight: bold;
+    width:1000px;
+    padding-bottom: 30px;
+    font-size:16px;
 }
 
 .links{
@@ -55,7 +59,7 @@ body{
 }
 
 .logo{
-    width:240px;
+    width:80px;
 }
 
 .data{
@@ -64,7 +68,7 @@ body{
 }
 
 .keen-slider{
-    height:640px;
+    height:320px;
 }
 
 .era{
@@ -72,7 +76,7 @@ body{
     flex-direction: row;
     background: var(--lyrics-analysis-secondary-color);
     width: 100%;
-    height: 120px;
+    height: 30px;
     align-content: center;
     margin-top: 50px;
     align-items: center;
@@ -81,14 +85,14 @@ body{
 
 .eralabel{
     margin-left:40px;
-    font-size: 34px;
+    font-size: 14px;
     font-weight: bold;
     color: var(--lyrics-analysis-ink-color);
     text-transform: uppercase;
 }
 
 .big5label{
-    color: var(--lyrics-analysis-category-color);
+    color: #a69aac;
     font-weight: bold;
     margin-left: 40px;
     font-size: 32ßpx;
@@ -100,13 +104,14 @@ body{
     display: flex;
     padding: 10px 0;
     justify-content: center;
-    margin-bottom: 30px;;
+    padding-top: 20px;
+    padding-bottom: 0;
 }
 
 .dot {
     border: none;
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
     background: #eeeeee;
     border-radius: 50%;
     margin: 0 30px;
@@ -126,6 +131,25 @@ body{
     background:var(--lyrics-analysis-link-color);
 }
 
+.frame{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width:100%;
+}
+
+.bandpics{
+    display: flex;
+    flex-direction: column;
+    width:500px;
+}
+
+.traitsection{
+    display: flex;
+    flex-direction: column;
+    width:500px;
+}
+
 
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
@@ -134,8 +158,55 @@ body{
 
 @media (min-width: 320px) and (max-width: 480px) {
     .container{
-        font-size: 24px;
+        font-size: 24px;  
     }    
+    
+    .frame{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+    }
+
+    .keen-slider{
+        height:640px;
+    }
+
+    .numberbar {
+        display: flex;
+        min-width: 80%;
+        max-width: 80%;
+        height: 30px;
+        padding: 20px;
+    }
+
+    .bandpics{
+        width:100%;
+    }
+
+    .traitsection{
+        width:100%;
+    }
+    
+    .banner{
+        /* width: 100%; */
+    }
+
+    .era{
+        height: 120px;
+    }
+
+    .dots{
+        margin-bottom: 30px;;
+    }
+
+    .logo{
+        width:240px;
+        padding-left:30px;
+    }
+
+    .links{
+        padding-right:30px;
+    }
 }
 
 /* ----------- iPhone X ----------- */
@@ -148,6 +219,52 @@ body{
 
     .container{
         font-size: 26px;
+        
     }  
 
+    .frame{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .keen-slider{
+        height:640px;
+    }
+
+    .numberbar {
+        display: flex;
+        min-width: 80%;
+        max-width: 80%;
+        height: 30px;
+        padding: 20px;
+    }
+
+    .bandpics{
+        width:100%;
+    }
+
+    .traitsection{
+        width:100%;
+    }
+
+    .banner{
+        /* width: 100%; */
+    }
+
+    .era{
+        height: 120px;
+    }
+
+    .dots{
+        margin-bottom: 30px;;
+    }
+
+    .logo{
+        width:240px;
+        padding-left:30px;
+    }
+
+    .links{
+        padding-right:30px;
+    }
 }

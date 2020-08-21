@@ -1,175 +1,205 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="./style.css">
-        <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/keen-slider@4.1.3/keen-slider.min.css"/>
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">        
-    </head>
-    <body onload="initialize()">
-        <div class="container"> 
-            <section class="banner">
-                <img class="logo" src="./images/beatleslogo.svg"></img>
-                <div>LYRICS ANALYSIS</div>
-                <div class="links">
-                    <a class="link" href="">COMPARISON</a>
-                    <a class="link" href="">ABOUT</a>
-                </div>
-            </section>
-            <div id="my-keen-slider" class="keen-slider"></div>
-            <div id="dots" class="dots"></div>
-            <section class="era">
-                <label id="eralabel" class="eralabel">Psychedelia:  1967 - 1969</label>
-            </section>
-            <label class="big5label">Big 5 Psychology Traits </label>
-            <section class="data">
-                <datablock-element id='Openness' trait="OPENNESS" value=56></datablock-element>
-                <datablock-element id='Conscientiousness' trait="CONSCIENCIOUSNESS" value=42></datablock-element></datablock-element>
-                <datablock-element id='Extraversion' trait="EXTRAVERSION" value=79></datablock-element></datablock-element>
-                <datablock-element id='Agreeableness' trait="AGREEABLENESS" value=64></datablock-element></datablock-element>
-                <datablock-element id='Emotional range' trait="EMOTIONAL RANGE" value=88></datablock-element></datablock-element>
-            </section>
-        </div>
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/keen-slider@4.1.3/keen-slider.min.js"></script>
-    <script src="logic.js"></script>
-    
-    <template id="bandpic">
-        <style>
-            .pic{
-                display: flex;
-                place-content: center;
-            }
 
-            .bandpic{
-                width:100%;
-            }
-        </style>
-        <section class="pic">
-            <img id="band" class="bandpic" src="">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@4.1.3/keen-slider.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="initialize()">
+    <div class="container">
+        <section class="banner">
+            <img class="logo" src="./images/beatleslogo.svg"></img>
+            <div>LYRICS ANALYSIS</div>
+            <div class="links">
+                <a class="link" href="">COMPARISON</a>
+                <a class="link" href="">ABOUT</a>
+            </div>
         </section>
-    </template>
+        <div id="my-keen-slider" class="keen-slider"></div>
+        <div id="dots" class="dots"></div>
+        <section class="era">
+            <label id="eralabel" class="eralabel">Psychedelia: 1967 - 1969</label>
+        </section>
+        <label class="big5label">Big 5 Psychology Traits </label>
+        <section class="data">
+            <datablock-element id='Openness' trait="OPENNESS" value=56></datablock-element>
+            <datablock-element id='Conscientiousness' trait="CONSCIENCIOUSNESS" value=42></datablock-element>
+            </datablock-element>
+            <datablock-element id='Extraversion' trait="EXTRAVERSION" value=79></datablock-element>
+            </datablock-element>
+            <datablock-element id='Agreeableness' trait="AGREEABLENESS" value=64></datablock-element>
+            </datablock-element>
+            <datablock-element id='Emotional range' trait="EMOTIONAL RANGE" value=88></datablock-element>
+            </datablock-element>
+        </section>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/keen-slider@4.1.3/keen-slider.min.js"></script>
+<script src="logic.js"></script>
 
-    <template id="datablock">
-        <style>
-            .datablock{
-                display:flex;
-                flex-direction: column;
-                align-items: flex-start;
-                margin-left:20px;
-                margin-top:10px;
-                padding-bottom: 10px;
-            }
+<template id="bandpic">
+    <style>
+        .pic {
+            display: flex;
+            place-content: center;
+        }
 
-            .infostrip{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                width:100%;
-            }
+        .bandpic {
+            width: 100%;
+        }
+    </style>
+    <section class="pic">
+        <img id="band" class="bandpic" src="">
+    </section>
+</template>
 
-            .numberbar{
+<template id="datablock">
+    <style>
+        .datablock {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .infostrip {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+        }
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            .numberbar {
                 display: flex;
                 min-width: 80%;
                 max-width: 80%;
-                height:30px;
+                height: 10px;
                 padding: 20px;
             }
+        }
 
-            .score{
-            width:75%;
+        /* ----------- iPhone X ----------- */
+
+        /* Portrait and Landscape */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+
+            .numberbar {
+                display: flex;
+                min-width: 80%;
+                max-width: 80%;
+                height: 10px;
+                padding: 20px;
+            }
+        }
+
+        .numberbar {
+            display: flex;
+            min-width: 80%;
+            max-width: 80%;
+            height: 30px;
+            padding: 20px;
+        }
+
+        .score {
+            width: 75%;
             background: var(--lyrics-analysis-score-color);
             transition: width 1s ease;
             /* border-bottom-left-radius: 20px;
             border-top-left-radius: 20px; */
             /* border-radius: 20px; */
-            }
+        }
 
-            .gap{
-                width:25%;
-                background: var(--lyrics-analysis-gap-color);
-                transition: width 1s ease;
-                /* border-bottom-right-radius: 20px;
+        .gap {
+            width: 25%;
+            background: var(--lyrics-analysis-gap-color);
+            transition: width 1s ease;
+            /* border-bottom-right-radius: 20px;
                 border-top-right-radius: 20px; */
-            }
+        }
 
 
-            .percentage{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                min-width: 10%;
-                max-width: 10%;
-                font-size: 36px;
-                padding: 20px;
-                font-weight: bold;
-                color:var(--lyrics-analysis-percentage-color);
-            }
+        .percentage {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            min-width: 10%;
+            max-width: 10%;
+            font-size: 36px;
+            padding: 20px;
+            font-weight: bold;
+            color: var(--lyrics-analysis-percentage-color);
+        }
 
-            .categorybar{
-                margin:20px;
-                margin-top:0;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                width: 92%;
-            }
+        .categorybar {
+            margin: 20px;
+            margin-top: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 92%;
+        }
 
-            .categorylabel{
-                font-size:26px;
-                font-weight: bold;
-                color: var(--lyrics-analysis-score-color);
-            }
+        .categorylabel {
+            font-size: 26px;
+            font-weight: bold;
+            color: var(--lyrics-analysis-score-color);
+        }
 
-            .subcategory{
-                font-size: 24px;
-                font-weight: bold;
-                text-transform: UPPERCASE;
-                width: 300px;
-                border: 1px solid var(--lyrics-analysis-secondary-color);
-                border-radius: 4px;
-                padding: 10px;
-                background: white;
-                color: #a69aac;
-                -webkit-appearance: none;
-            }
+        .subcategory {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: UPPERCASE;
+            width: 300px;
+            border: 1px solid var(--lyrics-analysis-secondary-color);
+            border-radius: 4px;
+            padding: 10px;
+            background: white;
+            color: #a69aac;
+            -webkit-appearance: none;
+        }
 
-            select, option{
-                color:var(--lyrics-analysis-score-color);
-                font-weight: bold;
-                text-align:right;   
-            }
+        select,
+        option {
+            color: var(--lyrics-analysis-score-color);
+            font-weight: bold;
+            text-align: right;
+        }
 
-            .subcategorytext{
-                font-size:30px;
-                /* font-weight: bold; */
-                text-transform: capitalize;
-                color:var(--lyrics-analysis-secondary-color) !important;
-                
-            }
-        
-        </style>
-        <section class="datablock">
-            <div class="infostrip">
-                <div class="numberbar">
-                    <div id="score" class="score"></div>
-                    <div id="gap" class="gap"></div>
-                </div>
-                <div id="percentage" class="percentage"></div>
+        .subcategorytext {
+            font-size: 30px;
+            /* font-weight: bold; */
+            text-transform: capitalize;
+            color: var(--lyrics-analysis-secondary-color) !important;
+
+        }
+    </style>
+    <section class="datablock">
+        <div class="infostrip">
+            <div class="numberbar">
+                <div id="score" class="score"></div>
+                <div id="gap" class="gap"></div>
             </div>
-            <div class="categorybar">
-                <label id="traitlabel" class="categorylabel"></label>
-                <select dir="rtl" class="subcategory" name="bigfive" id="subcategory">
-                    <option class="subcategorytext" value="something">subcategory</option>
-                    <option class="subcategorytext" value="saab">Saab</option>
-                    <option class="subcategorytext" value="mercedes">Mercedes</option>
-                    <option class="subcategorytext" value="audi">Audi</option>
-                  </select>
-            </div>
-        </section>
-    </template>
+            <div id="percentage" class="percentage"></div>
+        </div>
+        <div class="categorybar">
+            <label id="traitlabel" class="categorylabel"></label>
+            <select dir="rtl" class="subcategory" name="bigfive" id="subcategory">
+                <option class="subcategorytext" value="something">subcategory</option>
+                <option class="subcategorytext" value="saab">Saab</option>
+                <option class="subcategorytext" value="mercedes">Mercedes</option>
+                <option class="subcategorytext" value="audi">Audi</option>
+            </select>
+        </div>
+    </section>
+</template>
 
-    <script src="./components/bandpic.js"></script>
-    <script src="./components/datablock.js"></script>
+<script src="./components/bandpic.js"></script>
+<script src="./components/datablock.js"></script>
 
 </html>
