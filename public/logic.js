@@ -58,6 +58,23 @@ function initialize(){
                             var string = item.era + ' : ' + item.start + ' - ' + item.end;
                             var eralabel = document.getElementById('eralabel');
                             eralabel.innerHTML = string;
+
+                            var moodlabel = document.getElementById('moodlabel');
+                            moodlabel.innerHTML = item.mood;
+
+                            var blurb = document.getElementById('blurb');
+                            blurb.innerHTML = "";
+
+                            item.albums.forEach(function(album){
+                                album.background.forEach(function(info){
+                                    var paragraph = document.createElement('div');
+                                    paragraph.className = 'snippet';
+                                    paragraph.innerHTML = info;
+                                    blurb.appendChild(paragraph);
+                                })
+                            })
+
+
                             console.log(string)
                         }
 
@@ -65,11 +82,12 @@ function initialize(){
 
                     updateClasses(instance);
                     updateBars(index);
+                    updateAlbums(index);
                 }
             })
         }
     };
-    xhttp.open("GET", "./data/timeline.json", true);
+    xhttp.open("GET", "./data/beatles.json", true);
     xhttp.send();
 }
 
@@ -81,13 +99,56 @@ function updateBars(index){
 
     beatles[index].analysis.personality.forEach(function(datapoint){
 
-        console.log(datapoint);
-
         var point = document.getElementById(datapoint.name);
 
         var value = Math.round( datapoint.percentile * 100 );
         point.setAttribute('value', value);
+    })
+}
 
+function updateAlbums(index){
+    console.log('UPDATE ALBUMS');
+
+    console.log(beatles[index].albums);
+
+    var tracklist = document.getElementById('tracklist');
+    tracklist.innerHTML = "";
+
+    beatles[index].albums.forEach(function(album){
+    
+        var section = document.createElement("section");
+        section.className = "album";
+
+        var sleeve = document.createElement("div");
+        sleeve.className = "sleeve";
+
+        var cover = document.createElement("img");
+        cover.className = "albumcover";
+        cover.src = "./images/covers/" + album.cover;
+
+        console.log(cover.src);
+        sleeve.appendChild(cover);
+
+        var title = document.createElement("label");
+        title.className = "albumtitle";
+        title.innerHTML = album.title;
+
+        var tracks = document.createElement("ul");
+        tracks.className = "tracks";
+
+        album.songs.forEach(function(track){
+            var song = document.createElement("li");
+            song.className = "track";
+            song.innerHTML = track;
+            tracks.appendChild(song);
+        });
+
+        section.appendChild(sleeve);
+        section.appendChild(title);
+        console.log("ADDING ALBUM INFO FOR: " + album.title);
+        section.appendChild(tracks);
+
+        tracklist.appendChild(section);
     })
 }
 

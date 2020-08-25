@@ -1,0 +1,195 @@
+[{
+        "order": 1,
+        "era": "Beatle Mania",
+        "albums": [{
+            "title": "A Hard Days Night",
+            "lyrics": "harddaysnight.txt",
+            "songs": ["A Hard Days Night",
+                "I Should Have Known Better",
+                "If I Fell",
+                "I'm Happy Just To Dance With You",
+                "And I Love Her",
+                "Tell Me Why",
+                "Can't Buy Me Love",
+                "Any Time At All",
+                "I'll Cry Instead",
+                "Things We Said Today",
+                "When I Get Home",
+                "You Can't Do That",
+                "I'll Be Back"
+            ],
+            "cover": "harddaysnight.jpg",
+            "releaseMonth": "June",
+            "releaseYear": 1964
+        }, {
+            "title": "Help!",
+            "lyrics": "help.txt",
+            "songs": ["Help!",
+                "The Night Before",
+                "You’ve Got To Hide Your Love Away",
+                "I Need You",
+                "Another Girl",
+                "You’re Going To Lose That Girl",
+                "Ticket To Ride",
+                "Act Naturally",
+                "It’s Only Love",
+                "You Like Me Too Much",
+                "Tell Me What You See",
+                "I’ve Just Seen A Face",
+                "Yesterday",
+                "Dizzy Miss Lizzy"
+            ],
+            "cover": "help.jpg",
+            "releaseMonth": "August",
+            "releaseYear": 1965
+        }],
+        "mood": "Mania",
+        "sytle": "pop",
+        "start": 1963,
+        "end": 1965,
+        "image": "mania.svg"
+    }, {
+
+        "order": 2,
+        "era": "Experimentation",
+        "albums": [{
+            "title": "Rubber Soul",
+            "lyrics": "rubbersoul.txt",
+            "songs": ["Drive My Car",
+                "Norwegian Wood",
+                "You Won't See Me",
+                "Nowhere Man",
+                "Think For Yourself",
+                "The Word",
+                "Michelle",
+                "What Goes On",
+                "Girl",
+                "I'm Looking Through You",
+                "In My Life",
+                "Wait",
+                "If I Needed Someone",
+                "Run For Your Life"
+            ],
+            "cover": "rubbersoul.jpg",
+            "releaseMonth": "December",
+            "releaseYear": 1965
+        }, {
+            "title": "Revolver",
+            "lyrics": "revolver.txt",
+            "songs": ["Taxman",
+                "Eleanor Rigby",
+                "I'm Only Sleeping",
+                "Love To You",
+                "Here, There and Everywhere",
+                "Yellow Submarine",
+                "She Said She Said",
+                "Good Day Sunshine",
+                "And Your Bird Can Sing",
+                "For No One",
+                "Doctor Robert",
+                "I Want To Tell You",
+                "Got To Get You Into My Life",
+                "Tomorrow Never Knows"
+            ],
+            "cover": "revolver.jpg",
+            "releaseMonth": "August",
+            "releaseYear": 1966
+        }],
+        "mood": "Experimentation",
+        "sytle": "visionary",
+        "start": 1965,
+        "end": 1966,
+        "image": "experimentation.svg"
+    },
+    {
+        "order": 3,
+        "era": "Psychedelia",
+        "albums": [{
+            "title": "Sgt. Pepper's Lonely Hearts Club Band",
+            "lyrics": "sgtpepper.txt",
+            "songs": ["Sgt. Pepper's Lonely Hearts Club Band",
+                "With A Little Help From My Friends",
+                "Lucy In The Sky With Diamonds",
+                "Getting Better",
+                "Fixing A Hole",
+                "She's Leaving Home",
+                "Being For The Benefit Of Mr. Kite",
+                "Within You Without You",
+                "When I'm Sixty Four",
+                "Lovely Rita",
+                "Good Morning Good Night",
+                "Sgt. Pepper's Lonely Hearts Club Band",
+                "A Day In The Life"
+            ],
+            "cover": "sgtpepper.jpg",
+            "releaseMonth": "June",
+            "releaseYear": 1967
+        }, {
+            "title": "Magical Mystery Tour",
+            "lyrics": "magicalmysterytour.txt",
+            "songs": [],
+            "cover": "mysterytour.jpg",
+            "releaseMonth": "November",
+            "releaseYear": 1967
+        }, {
+            "title": "Yellow Submarine",
+            "lyrics": "yellowsubmarine.txt",
+            "songs": [],
+            "releaseMonth": "January",
+            "releaseYear": 1969
+        }],
+        "mood": "Everything Is Cool",
+        "sytle": "psychedelic rock ",
+        "start": 1967,
+        "end": 1969,
+        "image": "psychedelia.svg"
+
+    },
+    {
+        "order": 4,
+        "era": "Back To Basics",
+        "albums": [{
+            "title": "The Beatles",
+            "lyrics": "whitealbum.txt",
+            "songs": [],
+            "cover": "whitealbum.jpg",
+            "releaseMonth": "November",
+            "releaseYear": 1968
+        }, {
+            "title": "Let It Be",
+            "lyrics": "letitbe.txt",
+            "cover": "letitbe.jpg",
+            "songs": [],
+            "releaseMonth": "May",
+            "releaseYear": 1970
+        }],
+        "mood": "Splintering, Hostile Lethergy",
+        "sytle": "rock",
+        "start": 1968,
+        "end": 1970,
+        "image": "backtobasics.svg"
+
+    },
+    {
+        "order": 5,
+        "era": "Resurgence",
+        "albums": [{
+            "title": "Abbey Road",
+            "lyrics": "abbeyroad.txt",
+            "songs": [],
+            "releaseMonth": "September",
+            "releaseYear": 1969
+        }, {
+            "title": "Hey Jude",
+            "lyrics": "heyjude.txt",
+            "songs": [],
+            "releaseMonth": "February",
+            "releaseYear": 1970
+        }],
+        "mood": "Going Out With A Bang",
+        "sytle": "rock",
+        "start": 1969,
+        "end": 1970,
+        "image": "resurgence.svg"
+    }
+]

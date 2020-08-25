@@ -90,12 +90,9 @@ function loadLyricsForEra(era) {
     console.log('Lyric promises: ' + lyricpromises.length);
 
     Promise.all(lyricpromises).then(function (values) {
-      // console.log(values);
       eralyrics = values;
       resolve(eralyrics);
     })
-    // console.log(eralyrics)
-
   })
 }
 
@@ -105,9 +102,7 @@ timeline.forEach(function (era) {
   var eralyrics = "";
   var p = loadLyricsForEra(era);
   p.then(function (eralyrics) {
-    // console.log(eralyrics);
     analyze(eralyrics, era);
   }, function (err) {
-    // console.log(err);
   });
 });

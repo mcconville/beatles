@@ -12,8 +12,10 @@
 <body onload="initialize()">
     <div class="container">
         <section class="banner">
-            <img class="logo" src="./public/images/beatleslogo.svg"></img>
-            <div>LYRICS ANALYSIS</div>
+            <div class="wrap">
+                <img class="logo" src="./public/images/beatleslogo.svg"></img>
+                <div class="lyricsanalysis">LYRICS PSYCHOLOGY</div>
+            </div>
             <div class="links">
                 <a class="link" href="">COMPARISON</a>
                 <a class="link" href="">ABOUT</a>
@@ -26,6 +28,14 @@
                 <section class="era">
                     <label id="eralabel" class="eralabel">Psychedelia: 1967 - 1969</label>
                 </section>
+                <section class="background">
+                    <label id="moodlabel" class="moodlabel"></label>
+                    <section class="blurb" id="blurb">
+
+
+                    </section>
+                </section>
+
             </div>
             <div class="traitsection">
                 <label class="big5label">Big 5 Psychology Traits </label>
@@ -39,6 +49,43 @@
                     </datablock-element>
                     <datablock-element id='Emotional range' trait="EMOTIONAL RANGE" value=88></datablock-element>
                     </datablock-element>
+                </section>
+                <label class="albumbanner">Albums</label>
+                <section class="tracklist" id="tracklist">
+                    <section class="album">
+                        <div class="sleeve">
+                            <img class="albumcover" src="./images/covers/abbeyroad.jpg">
+                        </div>
+                        <label class="albumtitle">Abbey Road</label>
+                        <ul class="tracks">
+                            <li class="track">Come Together</li>
+                            <li class="track">Something</li>
+                            <li class="track">Maxwell's Silver Hammer</li>
+                            <li class="track">Oh! Darling</li>
+                            <li class="track">Octopus's Garden</li>
+                            <li class="track">I Want You</li>
+                            <li class="track">Here Comes The Sun</li>
+                            <li class="track">Because</li>
+                            <li class="track">You Never Gave Me</li>
+                            <li class="track">Sun King</li>
+                            <li class="track">Mean Mr. Mustard</li>
+                            <li class="track">Polythene Pam</li>
+                            <li class="track">She Came In Through</li>
+                            <li class="track">Golden Slumbers</li>
+                            <li class="track">Carry That Weight</li>
+                            <li class="track">The End</li>
+                            <li class="track">Her Majesty</li>
+                        </ul>
+                    </section>
+
+                    <section class="album">
+                        <div class="sleeve">
+                            <img class="albumcover" src="./images/covers/abbeyroad.jpg">
+                        </div>
+                        <label class="albumtitle">Abbey Road</label>
+                    </section>
+
+
                 </section>
             </div>
         </div>
@@ -71,8 +118,8 @@
             flex-direction: column;
             align-items: flex-start;
             margin-left: 20px;
-            margin-top: 10px;
-            padding-bottom: 10px;
+            /* margin-top: 10px;
+            padding-bottom: 10px; */
         }
 
         .infostrip {
@@ -130,15 +177,15 @@
         }
 
         .categorylabel {
-            font-size: 16px;
-            font-weight: bold;
-            margin-left:20px;
+            font-size: 12px;
+            /* font-weight: bold; */
+            margin-left: 20px;
             color: var(--lyrics-analysis-score-color);
         }
 
         .subcategory {
-            font-size: 16px;
-            font-weight: bold;
+            font-size: 10px;
+            /* font-weight: bold; */
             text-transform: UPPERCASE;
             width: 200px;
             border: 1px solid var(--lyrics-analysis-secondary-color);
@@ -195,7 +242,7 @@
                 padding: 20px;
             }
 
-            .subcategory{
+            .subcategory {
                 padding: 20px;
             }
         }
@@ -236,7 +283,7 @@
                 color: var(--lyrics-analysis-score-color);
             }
 
-            .subcategory{
+            .subcategory {
                 padding: 20px;
             }
 
