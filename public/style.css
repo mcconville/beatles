@@ -66,8 +66,8 @@ body{
 
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-top: 20px; */
+    margin-bottom: 40px;
 
 }
 
@@ -75,19 +75,23 @@ body{
     height:320px;
 }
 
-.era{
+.drawings{
+    height:455px;
+}
+
+.heading{
     display: flex;
     flex-direction: row;
     background: var(--lyrics-analysis-secondary-color);
     width: 100%;
     height: 30px;
     align-content: center;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     align-items: center;
     margin-bottom: 20px;
 }
 
-.eralabel{
+.headinglabel{
     margin-left:20px;
     font-size: 14px;
     font-weight: bold;
@@ -177,13 +181,15 @@ padding-left: 20px;
 .bandpics{
     display: flex;
     flex-direction: column;
-    width:500px;
+    width:485px;
+    margin-right:15px;
 }
 
 .traitsection{
     display: flex;
     flex-direction: column;
-    width:500px;
+    width:485;
+    margin-left:15px;
 }
 
 .blurb{
@@ -196,13 +202,13 @@ padding-left: 20px;
 .tracklist{
     display: flex;
     flex-direction: row;
-    margin-left: 40px;
+    margin-left: 20px;
     margin-top:20px;
 }
 
 .albumbanner{
 
-    text-transform: uppercase;
+    /* text-transform: uppercase;
 
     display: flex;
     flex-direction: row;
@@ -218,7 +224,7 @@ padding-left: 20px;
     margin-left: 20px;
     font-size: 14px;
     font-weight: bold;
-    color: var(--lyrics-analysis-ink-color);
+    color: var(--lyrics-analysis-ink-color); */
 }
 
 .album{
@@ -314,7 +320,7 @@ padding-left: 20px;
         /* width: 100%; */
     }
 
-    .era{
+    .heading{
         height: 120px;
     }
 
@@ -374,7 +380,7 @@ padding-left: 20px;
         /* width: 100%; */
     }
 
-    .era{
+    .heading{
         height: 120px;
     }
 

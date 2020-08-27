@@ -23,13 +23,15 @@
         </section>
         <div class="frame">
             <div class="bandpics">
-                <section class="beatles">
-                    <label id="eralabel" class="eralabel">Psychedelia: 1967 - 1969</label>
+                <section class="drawings">
+                    <section class="beatles">
+                        <label id="eralabel" class="headinglabel">Psychedelia: 1967 - 1969</label>
+                    </section>
+                    <div id="my-keen-slider" class="keen-slider"></div>
+                    <div id="dots" class="dots"></div>
                 </section>
-                <div id="my-keen-slider" class="keen-slider"></div>
-                <div id="dots" class="dots"></div>
-                <section class="era">
-                    <label id="eralabel" class="eralabel">BACKGROUND</label>
+                <section class="heading">
+                    <label id="headinglabel" class="headinglabel">BACKGROUND</label>
                 </section>
                 <section class="background">
                     <label id="moodlabel" class="moodlabel"></label>
@@ -40,7 +42,9 @@
 
             </div>
             <div class="traitsection">
-                <label class="big5label">Big 5 Psychology Traits </label>
+                <section class="heading">
+                    <label class="headinglabel">Big 5 Psychology Traits </label>
+                </section>
                 <section class="data">
                     <datablock-element id='Openness' trait="OPENNESS" value=56></datablock-element>
                     <datablock-element id='Conscientiousness' trait="CONSCIENCIOUSNESS" value=42></datablock-element>
@@ -52,7 +56,10 @@
                     <datablock-element id='Emotional range' trait="EMOTIONAL RANGE" value=88></datablock-element>
                     </datablock-element>
                 </section>
-                <label class="albumbanner">Albums</label>
+                <section class="heading">
+                    <label class="headinglabel">Albums</label>
+                </section>
+
                 <section class="tracklist" id="tracklist">
                 </section>
             </div>
@@ -85,7 +92,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            margin-left: 20px;
+            /* margin-left: 20px; */
             /* margin-top: 10px;
             padding-bottom: 10px; */
         }
@@ -157,8 +164,8 @@
             text-transform: UPPERCASE;
             width: 200px;
             border: 1px solid var(--lyrics-analysis-secondary-color);
-            border-radius: 4px;
-            padding: 4px;
+            /* border-radius: 4px; */
+            padding: 5px;
             background: white;
             color: #a69aac;
             -webkit-appearance: none;
