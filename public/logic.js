@@ -75,6 +75,11 @@ function initialize(){
                             })
 
 
+
+                            var container = document.getElementById('blurb');
+                            container.className = 'blurb';
+                            container.className = container.className + ' ' + item.className;
+
                             console.log(string)
                         }
 

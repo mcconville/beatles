@@ -1,0 +1,4 @@
+.zebra {
+  background-image: paint(zebra);
+  --zebraColor:#f9fafe;
+}

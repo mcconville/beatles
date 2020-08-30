@@ -1,0 +1,6 @@
+.scribble {
+    background-image: paint(scribble);
+  --scribbleColor:#EDF1FE;
+  --scribbleWobble:4;
+  --scribbleWidth:1;
+}

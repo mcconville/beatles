@@ -1,0 +1,6 @@
+.grid {
+    background-image: paint(grid);
+  --scribbleColor:#E1297D;
+  --scribbleWobble:4;
+  --scribbleWidth:1;
+}

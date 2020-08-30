@@ -1,0 +1,7 @@
+.flower {
+    background-image: paint(flower);
+  --flowerColor:#EDF1FE;
+  --flowerSize:10;
+  --flowerPetals:5;
+  --flowerAmount:100;
+}

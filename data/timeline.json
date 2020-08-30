@@ -42,9 +42,10 @@
                 "Dizzy Miss Lizzy"
             ],
             "cover": "help.jpg",
-            "background": ["Help! includes Paul McCartney's 'Yesterday', arranged for guitar and string quartet and recorded without the other group members. John Lennon's 'You've Got to Hide Your Love Away' indicates the influence of Bob Dylan and includes flutes. McCartney's 'I've Just Seen a Face' had a country flavour.", 
-                "'Ticket to Ride', released as a single in April 1965, was felt by Lennon to be heavy in its sound compared to the group's previous output and daring in its reference to a boy and girl living together. McCartney called the arrangement 'quite radical'. During the recording sessions for the album, the band used the studio's multitracking capabilities to layer their sound. In this, author Mark Prendergast highlights George Harrison's use of a volume pedal and incorporation of 'more intricate chordal devices to enrich his guitar sound'.", 
-                "As a songwriter, Harrison contributed 'I Need You' and 'You Like Me Too Much'. These were his first compositions to be included on a Beatles album since 'Don't Bother Me' on 1963's With the Beatles."],
+            "background": ["Help! includes Paul McCartney's 'Yesterday', arranged for guitar and string quartet and recorded without the other group members. John Lennon's 'You've Got to Hide Your Love Away' indicates the influence of Bob Dylan and includes flutes. McCartney's 'I've Just Seen a Face' had a country flavour.",
+                "'Ticket to Ride', released as a single in April 1965, was felt by Lennon to be heavy in its sound compared to the group's previous output and daring in its reference to a boy and girl living together. McCartney called the arrangement 'quite radical'. During the recording sessions for the album, the band used the studio's multitracking capabilities to layer their sound. In this, author Mark Prendergast highlights George Harrison's use of a volume pedal and incorporation of 'more intricate chordal devices to enrich his guitar sound'.",
+                "As a songwriter, Harrison contributed 'I Need You' and 'You Like Me Too Much'. These were his first compositions to be included on a Beatles album since 'Don't Bother Me' on 1963's With the Beatles."
+            ],
             "releaseMonth": "August",
             "releaseYear": 1965,
             "link": "https://en.wikipedia.org/wiki/Help!"
@@ -53,7 +54,8 @@
         "sytle": "pop",
         "start": 1963,
         "end": 1965,
-        "image": "mania.svg"
+        "image": "mania.svg",
+        "className": "grid"
     }, {
         "order": 2,
         "era": "Experimentation",
@@ -79,7 +81,7 @@
             "background": ["Rubber Soul's songs demonstrate the Beatles' increasing maturity as lyricists, and in their incorporation of brighter guitar tones and new instrumentation such as sitar, harmonium and fuzz bass, the group striving for more expressive sounds and arrangements for their music.", "The project marked a progression in the band's treatment of the album format as an artistic platform, an approach they continued to develop with Revolver and Sgt. Pepper's Lonely Hearts Club Band."],
             "releaseMonth": "December",
             "releaseYear": 1965,
-            "link":"https://en.wikipedia.org/wiki/Rubber_Soul"
+            "link": "https://en.wikipedia.org/wiki/Rubber_Soul"
         }, {
             "title": "Revolver",
             "lyrics": "revolver.txt",
@@ -102,13 +104,14 @@
             "background": ["Revolver's songs reflect the Beatle's interest in the drug LSD, Eastern philosophy and the avant-garde while addressing themes such as death and transcendence from material concerns.", "Among its tracks are 'Tomorrow Never Knows', incorporating heavy Indian drone and a collage of tape loops; 'Eleanor Rigby', a song about loneliness featuring a string octet as its only musical backing; and 'Love You To', a foray into Hindustani classical music."],
             "releaseMonth": "August",
             "releaseYear": 1966,
-            "link":"https://en.wikipedia.org/wiki/Revolver_(Beatles_album)"
+            "link": "https://en.wikipedia.org/wiki/Revolver_(Beatles_album)"
         }],
         "mood": "Experimentation",
         "sytle": "visionary",
         "start": 1965,
         "end": 1966,
-        "image": "experimentation.svg"
+        "image": "experimentation.svg",
+        "className": "scribble"
     },
     {
         "order": 3,
@@ -134,7 +137,7 @@
             "background": ["Sgt. Pepper is regarded by musicologists as an early concept album that advanced the roles of sound composition, extended form, psychedelic imagery, record sleeves, and the producer in popular music. The album had an immediate cross-generational impact and was associated with numerous touchstones of the era's youth culture, such as fashion, drugs, mysticism, and a sense of optimism and empowerment."],
             "releaseMonth": "June",
             "releaseYear": 1967,
-            "link":"https://en.wikipedia.org/wiki/Sgt._Pepper%27s_Lonely_Hearts_Club_Band"
+            "link": "https://en.wikipedia.org/wiki/Sgt._Pepper%27s_Lonely_Hearts_Club_Band"
         }, {
             "title": "Magical Mystery Tour",
             "lyrics": "magicalmysterytour.txt",
@@ -154,7 +157,7 @@
             "background": ["Magical Mystery Tour sessions have been characterised by some biographers as aimless and unfocused, with the band members overly indulging in sound experimentation and exerting greater control over production. McCartney contributed three of the soundtrack songs, including the widely covered 'The Fool on the Hill'"],
             "releaseMonth": "November",
             "releaseYear": 1967,
-            "link":"https://en.wikipedia.org/wiki/Magical_Mystery_Tour"
+            "link": "https://en.wikipedia.org/wiki/Magical_Mystery_Tour"
         }, {
             "title": "Yellow Submarine",
             "lyrics": "yellowsubmarine.txt",
@@ -175,13 +178,14 @@
             "cover": "yellowsubmarine.jpg",
             "background": ["Yellow Submarine arose from contractual obligations for the Beatles to supply new songs to the soundtrack to United Artists' animated film Yellow Submarine. Having recently completed their album Sgt. Pepper's Lonely Hearts Club Band in April 1967, the group showed minimal enthusiasm for the project."],
             "releaseYear": 1969,
-            "link":"https://en.wikipedia.org/wiki/Yellow_Submarine_(album)"
+            "link": "https://en.wikipedia.org/wiki/Yellow_Submarine_(album)"
         }],
         "mood": "Everything Is Cool",
         "sytle": "psychedelic rock ",
         "start": 1967,
         "end": 1969,
-        "image": "psychedelia.svg"
+        "image": "psychedelia.svg",
+        "className": "flower"
     },
     {
         "order": 4,
@@ -224,7 +228,7 @@
             "background": ["The Beatles is recognised for its fragmentary style and diverse range of genres, including folk, British blues, ska, music hall and the avant-garde. It has since been viewed by some critics as a postmodern work, as well as among the greatest albums of all time.", "At the end of May 1968, the Beatles returned to EMI Studios in London to commence recording sessions that lasted until mid-October. During these sessions, arguments broke out among the foursome over creative differences and John Lennon's new partner, Yoko Ono, whose constant presence subverted the Beatles' policy regarding wives and girlfriends in the studio. After a series of problems, including producer George Martin taking a sudden leave of absence and engineer Geoff Emerick suddenly quitting, Ringo Starr left the band briefly in August. The same tensions continued throughout the following year and led to the band's break-up."],
             "releaseMonth": "November",
             "releaseYear": 1968,
-            "link":"https://en.wikipedia.org/wiki/The_Beatles_(album)"
+            "link": "https://en.wikipedia.org/wiki/The_Beatles_(album)"
         }, {
             "title": "Let It Be",
             "lyrics": "letitbe.txt",
@@ -246,14 +250,14 @@
             ],
             "releaseMonth": "May",
             "releaseYear": 1970,
-            "link":"https://en.wikipedia.org/wiki/Let_It_Be_(Beatles_album)"
+            "link": "https://en.wikipedia.org/wiki/Let_It_Be_(Beatles_album)"
         }],
         "mood": "Splintering, Hostile Lethergy",
         "sytle": "rock",
         "start": 1968,
         "end": 1970,
-        "image": "backtobasics.svg"
-
+        "image": "backtobasics.svg",
+        "className": ""
     },
     {
         "order": 5,
@@ -283,8 +287,8 @@
             "releaseMonth": "September",
             "releaseYear": 1969,
             "cover": "abbeyroad.jpg",
-            "background":["After the tense and unpleasant recording sessions for the proposed Get Back album, Paul McCartney suggested to music producer George Martin that the group get together and make an album 'the way we used to do it', free of the conflict that had begun during sessions for The Beatles (also known as the 'White Album'). Martin agreed, but on the strict condition that all the group – particularly John Lennon – allow him to produce the record in the same manner as earlier albums and that discipline would be adhered to. No one was entirely sure that the work was going to be the group's last, though George Harrison said 'it felt as if we were reaching the end of the line'.", "Abbey Road sold four million copies in its first two months of release."],
-            "link":"https://en.wikipedia.org/wiki/Abbey_Road"
+            "background": ["After the tense and unpleasant recording sessions for the proposed Get Back album, Paul McCartney suggested to music producer George Martin that the group get together and make an album 'the way we used to do it', free of the conflict that had begun during sessions for The Beatles (also known as the 'White Album'). Martin agreed, but on the strict condition that all the group – particularly John Lennon – allow him to produce the record in the same manner as earlier albums and that discipline would be adhered to. No one was entirely sure that the work was going to be the group's last, though George Harrison said 'it felt as if we were reaching the end of the line'.", "Abbey Road sold four million copies in its first two months of release."],
+            "link": "https://en.wikipedia.org/wiki/Abbey_Road"
         }, {
             "title": "Hey Jude",
             "lyrics": "heyjude.txt",
@@ -303,13 +307,14 @@
             "releaseMonth": "February",
             "releaseYear": 1970,
             "cover": "heyjude.jpg",
-            "background":["Hey Jude original title: The Beatles Again is a 1970 collection of non-album singles and B-sides by the Beatles. It included 'I Should Have Known Better' and 'Can't Buy Me Love', two singles released by Capitol Records whose only previous American album appearance had been on the A Hard Day's Night soundtrack album, which had been released by United Artists Records."],
-            "link":"https://en.wikipedia.org/wiki/Hey_Jude_(Beatles_album)"
+            "background": ["Hey Jude original title: The Beatles Again is a 1970 collection of non-album singles and B-sides by the Beatles. It included 'I Should Have Known Better' and 'Can't Buy Me Love', two singles released by Capitol Records whose only previous American album appearance had been on the A Hard Day's Night soundtrack album, which had been released by United Artists Records."],
+            "link": "https://en.wikipedia.org/wiki/Hey_Jude_(Beatles_album)"
         }],
         "mood": "Going Out With A Bang",
         "sytle": "rock",
         "start": 1969,
         "end": 1970,
-        "image": "resurgence.svg"
+        "image": "resurgence.svg",
+        "className": "zebra"
     }
 ]
