@@ -36,19 +36,8 @@ function analyze(words, era) {
   personality_insights.profile(profileParams)
     .then(response => {
       console.log('running personality insights');
-      // console.log(JSON.stringify(profile, null, 2));
-      // console.log(album);
-      // console.log(response);
-      // response.era = era.era;
-      // response.index = era.order;
-
-   
-
       era.analysis = response.result;
-
-      // newTimeLine.push(era);
       newTimeLine[era.order] = era;
-      // results.push(response);
 
       fs.writeFile('beatles.json', JSON.stringify(newTimeLine), function (err) {
         if (err) {

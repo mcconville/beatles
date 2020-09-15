@@ -8,7 +8,8 @@ var blue = [1, 79, 131];
 var yellow = [249, 223, 60];
 var orange = [255, 199, 102]; // [243, 119, 107];
 
-var black = [0,0,0];
+var black = [25, 85, 143];
+
 
 var openness = [];
 var conscientiousness = [];
@@ -18,7 +19,7 @@ var neuroticism = [];
 
 var mode = "time";
 
-var randomScalingFactor = function() {
+var randomScalingFactor = function () {
   return Math.round(Math.random() * 100)
 };
 
@@ -43,18 +44,16 @@ function makeRGB(color, opacity) {
 function basicLineChart(color) {
 
   var lineChartData = {
-    datasets: [
-      {
-        label: "My First dataset",
-        fillColor: makeRGB(color, 0.2),
-        strokeColor: makeRGB(color, 1),
-        pointColor: makeRGB(color, 1),
-        pointStrokeColor: "#fff",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: makeRGB(color, 1)
+    datasets: [{
+      label: "My First dataset",
+      fillColor: makeRGB(color, 0.2),
+      strokeColor: makeRGB(color, 1),
+      pointColor: makeRGB(color, 1),
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: makeRGB(color, 1)
 
-      }
-    ]
+    }]
   }
 
   return lineChartData;
@@ -63,7 +62,7 @@ function basicLineChart(color) {
 function process(persona, factor, collection) {
   var value = factor.percentile.toFixed(2) * 100;
 
-  factor.children.forEach(function(trait) {
+  factor.children.forEach(function (trait) {
 
     var traitdata = {
       'name': persona.title,
@@ -71,13 +70,13 @@ function process(persona, factor, collection) {
       'value': trait.percentile.toFixed(2) * 100
     };
 
-// console.log('trait.name: ' + trait.name);
-// console.log('traitdata: ' + traitdata);
+    // console.log('trait.name: ' + trait.name);
+    // console.log('traitdata: ' + traitdata);
 
-if(  subfactors[trait.name] != undefined ){
+    if (subfactors[trait.name] != undefined) {
 
-    subfactors[trait.name].push(traitdata);
-  }
+      subfactors[trait.name].push(traitdata);
+    }
   })
 
   var data = {
@@ -96,7 +95,7 @@ function compare(a, b) {
     return 1;
   else
     return 0;
-  }
+}
 
 function orderData(data) {
 
@@ -110,22 +109,22 @@ function orderData(data) {
   orderedData.labels = [];
   orderedData.data = [];
 
-  sorted.forEach(function(element) {
+  sorted.forEach(function (element) {
 
-    var labelcount = sortedCount+1;
+    var labelcount = sortedCount + 1;
 
     console.log('labelcount = ' + labelcount)
 
     console.log(personas[labelcount]);
 
-    if (mode === "time" ) {
+    if (mode === "time") {
 
-      if(labelcount<9){
-      orderedData.labels[sortedCount] = personas[labelcount].start;
+      if (labelcount < 9) {
+        orderedData.labels[sortedCount] = personas[labelcount].start;
       }
     } else {
-      if(labelcount<9){
-      orderedData.labels[sortedCount] = personas[labelcount].era;
+      if (labelcount < 9) {
+        orderedData.labels[sortedCount] = personas[labelcount].era;
       }
     }
 
@@ -179,32 +178,34 @@ function addChart(anchor, data) {
       scaleStepWidth: 10,
       scaleStartValue: 0,
       scaleShowVerticalLines: false
-    },{options: {
+    }, {
+      options: {
         legend: {
-            labels: {
-                fontColor: "white",
-                fontSize: 18
-            }
+          labels: {
+            fontColor: "white",
+            fontSize: 18
+          }
         },
         scales: {
-            yAxes: [{
-                ticks: {
-                    fontColor: "white",
-                    fontSize: 18,
-                    stepSize: 1,
-                    beginAtZero: true
-                }
-            }],
-            xAxes: [{
-                ticks: {
-                    fontColor: "white",
-                    fontSize: 14,
-                    stepSize: 1,
-                    beginAtZero: true
-                }
-            }]
+          yAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 18,
+              stepSize: 1,
+              beginAtZero: true
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 14,
+              stepSize: 1,
+              beginAtZero: true
+            }
+          }]
         }
-    }});
+      }
+    });
   } else {
     var chart = new Chart(ctx).Bar(data, {
       scaleOverride: true,
@@ -231,7 +232,7 @@ function buildPicker(factor) {
 
   // console.log('Factor: ' + factor.name);
 
-  factor.children.forEach(function(name) {
+  factor.children.forEach(function (name) {
 
     switch (factor.name) {
 
@@ -278,7 +279,7 @@ function compareOrder(a, b) {
     return 1;
   else
     return 0;
-  }
+}
 
 function readCombinedData() {
 
@@ -286,7 +287,7 @@ function readCombinedData() {
 
   var xmlhttp = new XMLHttpRequest();
 
-  xmlhttp.onreadystatechange = function() {
+  xmlhttp.onreadystatechange = function () {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
       var data = JSON.parse(xmlhttp.responseText);
 
@@ -299,45 +300,40 @@ function readCombinedData() {
       for (var f = 0; f < factors.length; f++) {
         buildPicker(factors[f]);
       }
-  
+
       var sorted = data.sort(compareOrder);
 
       sorted.forEach(function (persona) {
 
-       
+        var bigfive = persona.analysis.personality;
 
-          var bigfive = persona.analysis.personality;
+        bigfive.forEach(function (factor) {
 
-          bigfive.forEach(function (factor) {
+          switch (factor.name) {
 
-              switch (factor.name) {
+            case "Openness":
+              process(persona, factor, openness);
+              break;
 
-              case "Openness":
-                  process(persona, factor, openness);
-                  break;
+            case "Conscientiousness":
+              process(persona, factor, conscientiousness);
+              break;
 
-              case "Conscientiousness":
-                  process(persona, factor, conscientiousness);
-                  break;
+            case "Agreeableness":
+              process(persona, factor, agreeableness);
+              break;
 
-              case "Agreeableness":
-                  process(persona, factor, agreeableness);
-                  break;
+            case "Extraversion":
+              process(persona, factor, extraversion);
+              break;
 
-              case "Extraversion":
-                  process(persona, factor, extraversion);
-                  break;
-
-              case "Emotional range":
-                  process(persona, factor, neuroticism);
-                  break;
-
-              }
-          });
-
-          // console.log(data);
-
-          personaCount++;
+            case "Emotional range":
+              process(persona, factor, neuroticism);
+              break;
+          }
+        });
+        
+        personaCount++;
       })
 
       drawCharts()
@@ -353,11 +349,11 @@ function readPersonaData() {
 
   var xmlhttp = new XMLHttpRequest();
 
-  xmlhttp.onreadystatechange = function() {
+  xmlhttp.onreadystatechange = function () {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
       var data = JSON.parse(xmlhttp.responseText);
 
-      data.forEach(function(persona) {
+      data.forEach(function (persona) {
         personas[persona.order] = persona;
       });
 
@@ -414,6 +410,6 @@ function neuroticismTrait(e) {
   }
 }
 
-window.onload = function() {
+window.onload = function () {
   readPersonaData();
 }

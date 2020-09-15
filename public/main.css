@@ -411,7 +411,7 @@
     display: block;
     overflow: hidden;
     cursor: pointer;
-    border: 1px solid #ddd;
+    border: 1px solid #19558f;
     border-radius: 20px;
   }
 
@@ -440,14 +440,14 @@
     content: "by time";
     padding-left: 10px;
     background-color: #fff;
-    color: #777;
+    color: #19558f;
   }
 
   .onoffswitch-inner: after {
     content: "by persona";
     padding-right: 10px;
     background-color: #1CAFF6;
-    color: #777;
+    color: #19558f;
     text-align: right;
   }
 
@@ -455,7 +455,7 @@
     content: "by persona";
     padding-right: 10px;
     background-color: #ffffff;
-    color: #777;
+    color: #19558f;
     text-align: right;
   }
 
@@ -463,7 +463,7 @@
     display: block;
     width: 18px;
     margin: 3px;
-    background: #FFA200;
+    background: #19558f;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -510,7 +510,7 @@
     height: 36px;
     width: 36px;
     margin: 6px;
-    opacity: 0.7;
+    /* opacity: 0.7; */
   }
 
   .chartTitle {
@@ -518,7 +518,7 @@
     align-self: center;
     align-items: center;
     flex-direction: row;
-    color: #000;
+    color: #19558f;
     font-size: 18px;
     font-weight: bold;
   }
@@ -655,8 +655,8 @@
     width: 160px;
     height: 30px;
     align-self: center;
-    background: rgba(0, 0, 0, 0.1);
-    /* color: #ff9d00; */
+    background: #e8eef3;
+    color: #19558f;
     font-weight: bold;
     font-size: 12px;
     border: none;
@@ -668,7 +668,7 @@
     display: flex;
     align-content: center;
     font-size: 13px;
-    color: #000;
+    color: #19558f;
     padding-top: 20px;
     height: 110px;
   }
@@ -778,6 +778,6 @@
   }
 
   .hamilton {
-    margin-top: 20px;
-    height: 100px;
+    margin-top: 40px;
+    height: 65px;
   }
