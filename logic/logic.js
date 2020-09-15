@@ -22,8 +22,8 @@ function initialize(){
                 slide.className = 'keen-slider__slide';
 
                 var pic = document.createElement('bandpic-element');
-                pic.setAttribute('image', './images/'+ item.image);
-                pic.image = './images/'+ item.image;
+                pic.setAttribute('image', './images/SVG/'+ item.image);
+                pic.image = './images/SVG/'+ item.image;
 
                 slide.appendChild(pic);
                 carousel.appendChild(slide);
@@ -129,7 +129,7 @@ function updateAlbums(index){
 
         var cover = document.createElement("img");
         cover.className = "albumcover";
-        cover.src = "./images/covers/" + album.cover;
+        cover.src = './images/covers/' + album.cover;
 
         console.log(cover.src);
         sleeve.appendChild(cover);
