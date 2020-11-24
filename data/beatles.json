@@ -6,8 +6,8 @@
         "lyrics": "harddaysnight.txt",
         "releaseMonth": "June",
         "releaseYear": 1964,
-        "cover": "",
-        "background": [],
+        "cover": "https://t2.genius.com/unsafe/600x600/https%3A%2F%2Fimages.genius.com%2F68c11c7f5b6b66194d77e21a1996823a.1000x1000x1.jpg",
+        "background": ["A Hard Day's Night is the first Beatles album to feature entirely original compositions, and the only one where all the songs were written by Lennon–McCartney.", "Lennon is the primary author of nine of the thirteen tracks on the album, as well as being the lead singer on these same nine tracks (although Paul McCartney sings lead on the title track's middle-eight). Lennon and McCartney co-wrote 'I'm Happy Just to Dance with You', sung by Harrison, while McCartney wrote 'And I Love Her', 'Can't Buy Me Love' and 'Things We Said Today'. "],
         "link": "",
         "filename": "harddaysnight.txt",
         "songs": ["A hard days night", "I should have known better", "if I fell", "I'm happy just to dance with you", "And I love her", "Tell me why", "Can't buy me love", "Any time at all", "I'll cry instead", "Things we said today", "when I get home", "you can't do that", "I'll Be Back"]
