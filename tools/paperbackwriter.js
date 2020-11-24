@@ -39,7 +39,7 @@ function analyze(words, era) {
       era.analysis = response.result;
       newTimeLine[era.order -1] = era;
 
-      fs.writeFile('./data/beatles.json', JSON.stringify(newTimeLine), function (err) {
+      fs.writeFile('./data/mac.json', JSON.stringify(newTimeLine), function (err) {
         if (err) {
           return console.log(err);
         }
